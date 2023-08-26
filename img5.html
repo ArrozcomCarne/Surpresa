@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,63 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>Segunda foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img5.jpg" alt="Minha Imagem">
+            <h2>Quando saimos</h2>
+            <p>Nessa dia eu estava mo feliz a gente saiu com a minha mae esse dia e fomos naquele show q nn lembro o nome do cantor kkk mas ele era famoso nossa sdd a epoca q a gente podia sair junto
+            </p>
+            <p>Nn sei se vc reparou mas a muie do fundo te mo narigao kkk mas nn é isso q ia falar eu ia falar q vc estava linda nesse e tds os outros e outra lembra do algodao doce q eu estava com vergonha kkk bons momentos</p>
+            <h2>Poemas</h2>
+            <p class="poema">
+                Quero apenas cinco coisas...
+                Primeiro é o amor sem fim
+                A segunda é ver o outono
+                A terceira é o grave inverno
+                Em quarto lugar o verão
+                A quinta coisa são teus olhos
+                Não quero dormir sem teus olhos.
+                Não quero ser... sem que me olhes.
+                Abro mão da primavera para que continues me olhando.
+            </p>
+            <p class="poema">
+                Quero apenas cinco coisas...
+                Primeiro é o amor sem fim
+                A segunda é ver o outono
+                A terceira é o grave inverno
+                Em quarto lugar o verão
+                A quinta coisa são teus olhos
+                Não quero dormir sem teus olhos.
+                Não quero ser... sem que me olhes.
+                Abro mão da primavera para que continues me olhando.
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +112,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'clique' : 'cliques'}`;
+});
+    </script>
 </body>
 </html>

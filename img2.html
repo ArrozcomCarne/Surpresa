@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,52 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>Segunda foto nossa</h1>
     </header>
     <main>
         <div class="container">
             <img src="img/img2.jpg" alt="Minha Imagem">
-            <p></p>
+            <h2>querida</h2>
+            <p>Vida essa é a foto q somos indenticos q eu pareço uma menina, nn sou muito a favor dessa foto nn ela me deixa com cara de mulher por isso nn gosto de soltar o cabelo me deixa com cara de mulher e preciso ser macho na sua frente.</p>
+            <p>Tenho q mostar o macho q sou um homem destemido corajoso q se vir um bandido eu te protejo sabe kkk, mas no dia dessa foto eu estava feliz pq um sonho estava se realizando vc ali comigo me deixa gay so de lembra sabe kkk <strong>TE AMO</strong> e tem muita coisa por vim ainda esse é so o começo.</p>
+            <h2>Mais Poema</h2>
+            <p class="poema">
+            "Senhora, eu vos amo tanto
+            Que até por vosso marido
+            Me dá um certo quebranto."
+            </p>
+            <p class="poema">
+            "O tempo é muito lento para os que esperam
+            Muito rápido para os que têm medo
+            Muito longo para os que lamentam
+            Muito curto para os que festejam
+            Mas, para os que amam, o tempo é eterno."
+            </p>
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +101,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'TE AMO' : 'TE AMO'}`;
+});
+    </script>
 </body>
 </html>

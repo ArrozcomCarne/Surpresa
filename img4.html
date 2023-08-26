@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,66 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>Quarta foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img4.jpg" alt="Minha Imagem">
+            <h2>Filtro de cachorro</h2>
+            <p>Aqui começa nossa historia com esse filtro kkk dps q a gente usou esse filtro, e eu so uso ele agora kkk vc.</p>
+            <p>Nao é q nesse tempo a gente ja estava namorando oficial eu achava q vc nn ia querer namorar um merdinha como eu mas vc me aceitou imprecionante eu te devo muito vc me salvou eu estava muito triste nn tinha amigos nn tinha ninguem mas ai vc chegou e mudou td né?</p>
+            <h2>Poemas</h2>
+            <p class="poema">
+                "Soneto do Amor Total
+
+                Amo-te tanto, meu amor... não cante
+                O humano coração com mais verdade...
+                Amo-te como amigo e como amante
+                Numa sempre diversa realidade.
+
+                Amo-te afim, de um calmo amor prestante
+                E te amo além, presente na saudade.
+                Amo-te, enfim, com grande liberdade
+                Dentro da eternidade e a cada instante.
+
+                Amo-te como um bicho, simplesmente
+                De um amor sem mistério e sem virtude
+                Com um desejo maciço e permanente.
+
+                E de te amar assim, muito e amiúde
+                É que um dia em teu corpo de repente
+                Hei de morrer de amar mais do que pude.""
+            </p>
+            <p class="poema">
+                "Há quem diga que todas as noites são de sonhos.
+                Mas há também quem garanta que nem todas, só as de verão. No fundo, isto não tem muita importância.
+                O que interessa mesmo não é a noite em si, são os sonhos. Sonhos que o homem sonha sempre, em todos os lugares, em todas as épocas do ano, dormindo ou acordado."
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +115,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'TE AMO' : 'TE AMO'}`;
+});
+    </script>
 </body>
 </html>

@@ -49,6 +49,7 @@ p {
   margin: 10px;
   text-align: justify;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;                /* Remove margens padrão */
+  color: white;
 }
 button{
     display: block;
@@ -57,6 +58,16 @@ button{
     background-color: red;
     color: black;
 }
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
+}
+ 
     </style>
 </head>
 <body>
@@ -69,15 +80,16 @@ button{
             <img src="img/img1.jpg" alt="Minha Imagem">
             <p>Como posso dizer, essa foi a primeira foto q tiramos juntos, que belo momento a gente teve, foi  quando eu te pedi em namoro mas, você insistia para eu pedir para seu pai tambem, vc foi a melhor pessoa q apareceu na minha vida e te agradeço a cada momento q vc compareceu te amo minha vida e agora fique com um poema</p>
             <h2>Meu poema para vc</h2>
-            <p>"Amor não se transforma de hora em hora,
+            <p class="poema">"Amor não se transforma de hora em hora,
                 Antes se afirma para a eternidade.
                 Se isso é falso, e que é falso alguém provou,
                 Eu não sou poeta, e ninguém nunca amou."</p>
-            <p>"O amor é uma companhia.
+            <p class="poema">"O amor é uma companhia.
                 Já não sei andar só pelos caminhos,
                 Porque já não posso andar só."</p>
                 <h2>Vou fazer um botao de te amo ai vc clica quantas vezes vc quiser</h2>
-                <button>TE AMO</button>
+                <button id="clickButton">TE AMO</button>
+                <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -86,5 +98,16 @@ button{
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'TE AMO' : 'TE AMO'}`;
+});
+    </script>
 </body>
 </html>
