@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,75 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>decimo primeiro foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img12.jpg" alt="Minha Imagem">
+            <h2>Eu</h2>
+            <p>Eu so coloquei esse anime aqui pq vc sabe q eu gosto muito dele sabe entao por isso ele esta aqui</p>
+            <h2>Poemas</h2>
+            <p class="poema">
+                Amor em paz
+
+                Eu amei
+                Eu amei, ai de mim, muito mais
+                Do que devia amar
+                E chorei
+                Ao sentir que iria sofrer
+                E me desesperar
+                
+                Foi então
+                Que da minha infinita tristeza
+                Aconteceu você
+                Encontrei em você a razão de viver
+                E de amar em paz
+                E não sofrer mais
+                Nunca mais
+                Porque o amor é a coisa mais triste
+                Quando se desfaz
+            </p>
+            <p class="poema">
+                À minha eterna namorada
+
+                Lembro cada momento
+                Único e verdadeiro
+                Com você a meu lado
+                Iremos ser muito felizes
+                Amando-nos por inteiro.
+                
+                Hoje, ontem e amanhã.
+                Estaremos sempre juntos
+                Lembrando o que passou
+                Esperança é o que restou
+                Na vida intensa vivida
+                Amaremos por toda vida.
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +124,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'clique' : 'cliques'}`;
+});
+    </script>
 </body>
 </html>

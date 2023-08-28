@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,65 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>setima foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img7.jpg" alt="Minha Imagem">
+            <h2>Quando saimos</h2>
+            <p>
+                Foto do lado da professora, fique com os poema
+            </p>
+            <h2>Poemas</h2>
+            <p class="poema">
+                Amor é um marco eterno, dominante,
+                Que encara a tempestade com bravura;
+                É astro que norteia a vela errante,
+                Cujo valor se ignora, lá na altura.
+                Amor não teme o tempo, muito embora
+                Seu alfange não poupe a mocidade;
+                Amor não se transforma de hora em hora,
+                Antes se afirma para a eternidade.
+            </p>
+            <p class="poema">
+                Como é por dentro outra pessoa?
+                Quem é que o saberá sonhar?
+                A alma de outrem é outro universo
+                Com que não há comunicação possível,
+                Com que não há verdadeiro entendimento.
+                
+                Nada sabemos da alma
+                Senão da nossa;
+                As dos outros são olhares,
+                São gestos, são palavras,
+                Com a suposição
+                De qualquer semelhança no fundo.
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +114,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'clique' : 'cliques'}`;
+});
+    </script>
 </body>
 </html>

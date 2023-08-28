@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,72 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>sexta foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img6.jpg" alt="Minha Imagem">
+            <h2>Quando saimos</h2>
+            <p>Nessa momento estou conversando na chamada com vc e, eu gosto dessa foto ela é legal foi uma das primeira q postei no instagram essa e eu feliz imitando os emogi</p>
+            <p>eu nn sei fala de foto e nem tira é muito mas ok eu so queria deixa claro q te amo</p>
+            <h2>Poemas</h2>
+            <p class="poema">
+                Tomara
+
+                Que a tristeza te convença
+                Que a saudade não compensa
+                E que a ausência não dá paz
+                E o verdadeiro amor de quem se ama
+                Tece a mesma antiga trama
+                Que não se desfaz
+                
+                E a coisa mais divina
+                Que há no mundo
+                É viver cada segundo
+                Como nunca mais...
+            </p>
+            <p class="poema">
+                Cartas de amor
+
+                Ah! As cartas de amor!
+                Não existem poemas mais belos,
+                nem canções mais lindas do que as cartas de amor!
+                
+                E elas podem ser simples,
+                podem ser descoladas,
+                podem não ter mais que quatro ou cinco linhas,
+                mas sempre serão lindas,
+                perfeitas,
+                maravilhosas,
+                e sublimes,
+                pelo simples fato
+                de serem Cartas de Amor!
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +121,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'clique' : 'cliques'}`;
+});
+    </script>
 </body>
 </html>

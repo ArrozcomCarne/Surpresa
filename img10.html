@@ -33,6 +33,7 @@
     h2{
         color: white;
         text-align: center;
+        margin-bottom: 10px;
     }
     .container {
   width: 100%;
@@ -46,17 +47,86 @@ img {
 
 p {
   margin: 0; /* Remove margens padrão */
+  color: white;
+  text-align: justify;
+}
+.poema{
+    color: rgb(150, 0, 0);
+    margin-bottom: 20px;
+}
+button{
+    display: block;
+    margin: auto;
+    padding: 10px;
+    background-color: red;
+    color: black;
+}
+#clickCount {
+    font-size: 18px;
+    margin-top: 10px;
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Primeira Foto</h1>
+        <h1>decimo foto nossa</h1>
     </header>
     <main>
         <div class="container">
-            <img src="" alt="Minha Imagem">
-            <p></p>
+            <img src="img/img10.jpg" alt="Minha Imagem">
+            <h2>Poemas</h2>
+            <p class="poema">
+                As sem-razões do amor
+
+                Eu te amo porque te amo,
+                Não precisas ser amante,
+                e nem sempre sabes sê-lo.
+                Eu te amo porque te amo.
+                Amor é estado de graça
+                e com amor não se paga.
+                
+                Amor é dado de graça,
+                é semeado no vento,
+                na cachoeira, no eclipse.
+                Amor foge a dicionários
+                e a regulamentos vários.
+                
+                Eu te amo porque não amo
+                bastante ou demais a mim.
+                Porque amor não se troca,
+                não se conjuga nem se ama.
+                Porque amor é amor a nada,
+                feliz e forte em si mesmo.
+                
+                Amor é primo da morte,
+                e da morte vencedor,
+                por mais que o matem (e matam)
+                a cada instante de amor.
+            </p>
+            <p class="poema">
+                Soneto do Amor Total
+
+                Amo-te tanto, meu amor... não cante
+                O humano coração com mais verdade...
+                Amo-te como amigo e como amante
+                Numa sempre diversa realidade.
+                
+                Amo-te afim, de um calmo amor prestante
+                E te amo além, presente na saudade.
+                Amo-te, enfim, com grande liberdade
+                Dentro da eternidade e a cada instante.
+                
+                Amo-te como um bicho, simplesmente
+                De um amor sem mistério e sem virtude
+                Com um desejo maciço e permanente.
+                
+                E de te amar assim, muito e amiúde
+                É que um dia em teu corpo de repente
+                Hei de morrer de amar mais do que pude.
+            </p>
+
+            <button id="clickButton">TE AMO</button>
+            <p id="clickCount">0 Quantos click de Te amo</p>
           </div>
         <div>
 
@@ -65,5 +135,16 @@ p {
     <footer>
 
     </footer>
+    <script>
+        const clickButton = document.getElementById('clickButton');
+const clickCount = document.getElementById('clickCount');
+
+let count = 0;
+
+clickButton.addEventListener('click', () => {
+    count++;
+    clickCount.textContent = `${count} ${count === 1 ? 'clique' : 'cliques'}`;
+});
+    </script>
 </body>
 </html>
